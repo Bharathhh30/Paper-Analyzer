@@ -11,7 +11,7 @@ from googletrans import Translator
 translator = Translator()
 
 # Configure Google API for OpenAI
-genai.configure(api_key=os.getenv("AIzaSyBaCIhJCQBM-cGemHZ-i-bKupyXf_wqHHY"))
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Function to load Google Gemini Pro Vision API And get response
 def get_gemini_response(image, prompt):
@@ -37,7 +37,7 @@ def input_image_setup(uploaded_file):
         raise FileNotFoundError("No file uploaded")
 
 # Initialize Streamlit app
-st.set_page_config(page_title="Mike App",page_icon=":apple:")
+st.set_page_config(page_title="Edu For All",page_icon=":apple:")
 st.header("Question Paper analysis")
 
 # Define input prompt
@@ -51,7 +51,7 @@ is below format
 2. Topic 2 - similar question
 ----
 ----
-Finally you can also mention some informative website and make sure you always provide the geeksforgeeks website to prepare  and also mention 
+Finally you can also mention some informative website and make sure you always provide the geeksforgeeks,IBM technology and MIT opencourseware website to prepare  and also mention 
 extra topics for deeper learning , some practical examples to get some experimental learning
 make sure follow all the prompt
 """
